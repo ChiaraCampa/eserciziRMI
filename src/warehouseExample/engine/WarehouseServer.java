@@ -29,11 +29,11 @@ public class WarehouseServer {
         } catch (Exception e){
             registry = LocateRegistry.getRegistry(1689);
         }
-        String hostname = "0.0.0.0";
+        //String hostname = "0.0.0.0";
 
-        String bindLocation = "//" + hostname + ":" + 1689 + "/server";
+        //String bindLocation = "//" + hostname + ":" + 1689 + "/warehouse";
 
-        registry.bind(bindLocation, server);
+        registry.bind("warehouse", server);
         //UnicastRemoteObject.exportObject(server, 1689);
 
         System.out.println("Waiting for invocations from client");
